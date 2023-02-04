@@ -19,7 +19,13 @@ const donasVerdeExtra = new donas("verde", "con chispas", "Tenés que hacer una 
 
 const suma = (a, b) => a + b;
 
-let mensajeBienvenida = `Te doy la bienvenida al juego para decorar donas`;
+let mensajeBienvenida = 
+                        `¡Te doy la bienvenida al juego Kitten Donuts!
+                        \nInstrucciones:
+                        \nVas a ver un mensaje que te indica la dona que tenés que hacer y a continuación tendrías que detallar los ingredientes. Por ejemplo:
+                        \nTenés que hacer una dona amarilla sin chispas.
+                        \n- Color de la dona: amarilla
+                        \n- Ingrediente extra: sin chispas`;
 let respuestaCorrecta = `¡Muy bien!`;
 let respuestaIncorrecta = `¡La próxima será mejor!`;
 let juego = 0;
@@ -136,7 +142,7 @@ while (juego < 8){
 }
 
 alert(`Tu resultado es de ${puntaje}`);
-
+alert(`¡Gracias por participar!`)
 
 
 
