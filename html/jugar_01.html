@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kitten Donuts es un juego para distraerse un rato y divertirse con los gatitos">
+    <meta name="keywords"
+        content="Donas, juego de donas, donuts, donuts game, kitten donuts, kitten, gatitos, juegos, diversión">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/Bella.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Kitten Donuts</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #9ADBEB;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Kitten Donuts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./jugar.html">Jugar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./instrucciones.html">Instrucciones</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./acerca_de.html">Acerca de</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="menujugar01">
+
+        <div class="container">
+            <div class="pedido">
+                <h1>Pedido</h1>
+                <div class="base">
+                    <div class="dona_base1" id="basepedido1">
+                        <img src="../img/dona_sola_1.png" alt="dona" class="dona_prep_base1">
+                    </div>
+                    <div class="dona_decoracion_base1">
+                        <img src="../img/glase_transparente.png" alt="glaseado" id="basedecoracion1"
+                            class="dona_prep_base1">
+                    </div>
+                    <div class="dona_decoracion_base1">
+                        <img src="../img/glase_transparente.png" alt="glaseado" id="basedecoracionextra1"
+                            class="dona_prep_base1">
+                    </div>
+                </div>
+            </div>
+            <div class="segundos">
+                <img src="../img/Time.png" alt="reloj" class="time_img">
+                <div id="seconds" class="seconds">adasd</div>
+            </div>
+            <div class="positivos">
+                <img src="../img/Done.png" alt="tilde verde" class="ok_img">
+                <div id="right" class="right">adasd</div>
+            </div>
+            <div class="negativos">
+                <img src="../img/Close.png" alt="x roja" class="wrong_img">
+                <div id="wrong" class="wrong">adasdas</div>
+            </div>
+            <div class="img_bg_game">
+
+            </div>
+            <div class="life_points">
+                <div id="container_lifes">
+                    <img src="../img/Bella.png" alt="avatar" class="avatar">
+                    <div id="lifes" class="lifes">
+                        <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                        <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                        <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                        <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                        <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                    </div>
+                </div>
+                <div id="container_points">
+                    <img src="../img/Star.png" alt="estrella" class="star_img">
+                    <div id="points" class="points"></div>
+                </div>
+
+            </div>
+            <div class="img_bg_game_1">
+
+            </div>
+
+            <div class="dona_deco">
+                <div class="plato_solo">
+                    <img src="../img/plato.png" alt="plato" class="dona_preparar">
+                    <div class="dona_preparar_sola" id="dona_sola">
+                        <img src="../img/dona_sola_1.png" alt="dona" class="dona_prep_sola">
+                    </div>
+                    <div class="dona_decoracion_sola">
+                        <img src="../img/glase_transparente.png" alt="glaseado" id="decoracion" class="dona_prep_sola">
+                    </div>
+                    <div class="dona_decoracion_sola">
+                        <img src="../img/glase_transparente.png" alt="glaseado" id="decoracionextra"
+                            class="dona_prep_sola">
+                    </div>
+                </div>
+                <div class="botones_plato">
+                    <input type="button" name="" value="Comenzar" id="botonstart">
+                    <input type="button" name="" value="Borrar" id="botonborrar">
+                    <input type="button" name="" value="Agregar" id="botonagregar">
+                </div>
+            </div>
+            <div class="ingredientes">
+                <div class="container_ingredientes">
+                    <div class="ingrediente violeta">
+                        <button id="mg_violeta">
+                            <img src="../img/ingrediente_violeta.png" alt="manga con glasé violeta"
+                                class="img__ingredientes">
+                        </button>
+                    </div>
+                    <div class="ingrediente rosa">
+                        <button id="mg_rosa">
+                            <img src="../img/ingrediente_rosa.png" alt="manga con glasé rosa" class="img__ingredientes">
+                        </button>
+                    </div>
+                    <div class="ingrediente celeste">
+                        <button id="mg_celeste">
+                            <img src="../img/ingrediente_celeste.png" alt="manga con glasé celeste"
+                                class="img__ingredientes">
+                        </button>
+                    </div>
+                    <div class="ingrediente verde">
+                        <button id="mg_verde">
+                            <img src="../img/ingrediente_verde.png" alt="manga con glasé verde"
+                                class="img__ingredientes">
+                        </button>
+                    </div>
+                    <div class="ingrediente amarillo">
+                        <button id="mg_amarillo">
+                            <img src="../img/ingrediente_amarillo.png" alt="manga con glasé amarillo"
+                                class="img__ingredientes">
+                        </button>
+                    </div>
+                    <div class="ingrediente granas">
+                        <button id="mg_granas">
+                            <img src="../img/ingrediente_granas.png" alt="bowl con granas"
+                                class="img__ingredientes_granas">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <img src="../img/logo.png" alt="" class="logo">
+
+        <ul class="footer-ul">
+            <li class="footer-li">
+                <a href="../index.html">Inicio</a>
+            </li>
+            <li class="footer-li">
+                <a href="./jugar.html">Jugar</a>
+            </li>
+            <li class="footer-li">
+                <a href="./instrucciones.html">Instrucciones</a>
+            </li>
+            <li class="footer-li">
+                <a href="./acerca_de.html">Acerca de</a>
+            </li>
+        </ul>
+
+        <div class="social-icons-container">
+            <a href="https://www.linkedin.com/in/g-otero/" class="social-icon"></a>
+        </div>
+
+        <p class="copyright">&copy; 2023 Guadi Otero</p>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

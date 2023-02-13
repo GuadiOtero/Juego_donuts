@@ -1,0 +1,653 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*MENU PRINCIPAL*/
+body {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  background-color: #0f1517;
+}
+
+.navbar-brand {
+  font-family: "Fredoka One", cursive;
+  color: #0F1517;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.nav-item {
+  color: #0F1517;
+  font-family: "Fredoka", sans-serif;
+}
+
+#menuprincipal {
+  background-image: url(../img/background2.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menuprincipal h1 a {
+  cursor: pointer;
+  color: #9ADBEB;
+  text-decoration: none;
+}
+#menuprincipal h1 a:hover {
+  color: #0F1517;
+}
+
+footer {
+  background-color: #9C9B9E;
+  bottom: 0;
+  left: 0;
+  padding: 2rem 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .footer-ul {
+  text-align: center;
+  padding-left: 0px;
+  color: white;
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+  font-family: "Fredoka", sans-serif;
+}
+footer .logo {
+  width: auto;
+  margin-bottom: 1rem;
+}
+footer .social-icons-container,
+footer .footer-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+footer .footer-ul {
+  padding-left: 2rem;
+}
+footer .social-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background-image: url(../img/linkedin.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0.5rem;
+  opacity: 0.8;
+}
+footer .social-icon:hover {
+  opacity: 1;
+}
+footer .footer-ul {
+  list-style-type: none;
+}
+footer .footer-li {
+  margin: 1rem 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+  font-family: "Fredoka", sans-serif;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: white;
+}
+footer .footer-li:hover {
+  opacity: 1;
+}
+
+#menujugar {
+  background-image: url(../img/background2.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#menujugar .jugar__titulos {
+  padding-top: 8%;
+  padding-bottom: 5%;
+  font-family: "Fredoka", sans-serif;
+  color: #0F1517;
+}
+#menujugar .container {
+  display: grid;
+  align-content: space-around;
+  justify-items: center;
+  align-items: center;
+}
+#menujugar .container .card {
+  overflow: hidden;
+}
+#menujugar .container img {
+  width: auto;
+  transition: 0.5s;
+}
+#menujugar .container .intro {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #0F1517;
+  opacity: 0.5;
+  color: wheat;
+  transition: 0.5s;
+}
+#menujugar .container .intro h1 {
+  font-family: "Fredoka", sans-serif;
+}
+#menujugar .container .intro p {
+  font-family: "Fredoka", sans-serif;
+  visibility: hidden;
+  opacity: 0;
+  color: #9ADBEB;
+}
+#menujugar .container .card:hover {
+  cursor: pointer;
+}
+#menujugar .container .card:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
+#menujugar .container .card:hover .intro {
+  background-color: #0F1517;
+}
+#menujugar .container .card:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+
+#menujugar01 {
+  background-image: url(../img/background2.png);
+}
+#menujugar01 .container {
+  margin-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr 1fr 1fr 1fr;
+  grid-template-rows: 0.9fr 0.4fr 1.8fr 0.9fr;
+  gap: 0px 0px;
+  grid-template-areas: "pedido segundos positivos negativos img_bg_game" "pedido dona_deco dona_deco dona_deco life_points" "ingredientes dona_deco dona_deco dona_deco life_points" "ingredientes dona_deco dona_deco dona_deco img_bg_game_1";
+}
+#menujugar01 .pedido {
+  grid-area: pedido;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00ace0;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 .base {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+#menujugar01 .base .dona_base1 {
+  position: absolute;
+  top: 2%;
+  right: 25%;
+}
+#menujugar01 .base .dona_decoracion_base1 {
+  position: absolute;
+  top: 0.5%;
+  right: 24.9%;
+}
+#menujugar01 .segundos {
+  grid-area: segundos;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid #00ace0;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 .positivos {
+  grid-area: positivos;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid #00ace0;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 .negativos {
+  grid-area: negativos;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid #00ace0;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 .life_points {
+  grid-area: life_points;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #00ace0;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 #container_points {
+  grid-area: puntos;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 #container_lifes {
+  grid-area: puntos;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 .dona_deco {
+  grid-area: dona_deco;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00ace0;
+  padding: 1rem;
+}
+#menujugar01 .img_bg_game {
+  grid-area: img_bg_game;
+  background-image: url(../img/bg.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00ace0;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 .img_bg_game_1 {
+  grid-area: img_bg_game_1;
+  background-image: url(../img/bg.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00ace0;
+  padding: 1rem;
+  font-family: "Fredoka", sans-serif;
+  color: #0f1517;
+}
+#menujugar01 .ingredientes {
+  grid-area: ingredientes;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00ace0;
+  padding: 1rem;
+}
+#menujugar01 .container_ingredientes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "ingrediente_violeta ingrediente_rosa" "ingrediente_celeste ingrediente_verde" "ingrediente_amarillo ingrediente_granas";
+  justify-content: center;
+  align-items: center;
+}
+#menujugar01 .ingrediente_violeta {
+  grid-area: ingrediente_violeta;
+}
+#menujugar01 .ingrediente_rosa {
+  grid-area: ingrediente_rosa;
+}
+#menujugar01 .ingrediente_celeste {
+  grid-area: ingrediente_celeste;
+}
+#menujugar01 .ingrediente_verde {
+  grid-area: ingrediente_verde;
+}
+#menujugar01 .ingrediente_amarillo {
+  grid-area: ingrediente_amarillo;
+}
+#menujugar01 .ingrediente_granas {
+  grid-area: ingrediente_granas;
+}
+#menujugar01 .img__ingredientes,
+#menujugar01 .img__ingredientes_granas {
+  transition: 0.5s;
+}
+#menujugar01 .img__ingredientes:hover,
+#menujugar01 .img__ingredientes_granas:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+#menujugar01 button {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+}
+#menujugar01 .plato_solo {
+  position: relative;
+  height: 80%;
+  width: auto;
+}
+#menujugar01 .botones_plato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2%;
+}
+#menujugar01 .dona_preparar {
+  height: 100%;
+  width: auto;
+  margin-bottom: 2%;
+}
+#menujugar01 .dona_preparar_sola {
+  position: absolute;
+  top: 18%;
+  left: 18%;
+}
+#menujugar01 .dona_decoracion_sola {
+  position: absolute;
+  top: 17.9%;
+  left: 18.6%;
+}
+#menujugar01 .dona_prep_sola {
+  height: 20%;
+  width: auto;
+}
+#menujugar01 .dona_finalizar {
+  height: 30%;
+  width: auto;
+  margin-bottom: 10%;
+}
+#menujugar01 #botonagregar {
+  background-color: #8ad7f0;
+  border-radius: 5px;
+  border: 1px solid #00ace0;
+  display: inline-block;
+  cursor: pointer;
+  color: #0f1517;
+  font-family: "Fredoka", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 1% 3%;
+  text-decoration: none;
+}
+#menujugar01 #botonstart {
+  background-color: #77d14d;
+  border-radius: 5px;
+  border: 1px solid #589b39;
+  display: inline-block;
+  cursor: pointer;
+  color: #0f1517;
+  font-family: "Fredoka", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 1% 3%;
+  text-decoration: none;
+}
+#menujugar01 #botonstart:disabled {
+  background-color: #70726f;
+}
+#menujugar01 #botonagregar:disabled {
+  background-color: #70726f;
+}
+#menujugar01 #botonborrar {
+  background-color: #DE4F4F;
+  border-radius: 5px;
+  border: 1px solid #9b3838;
+  display: inline-block;
+  cursor: pointer;
+  color: #0f1517;
+  font-family: "Fredoka", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 1% 3%;
+  text-decoration: none;
+}
+#menujugar01 #botonstart:hover {
+  background-color: #589b39;
+}
+#menujugar01 #botonagregar:hover {
+  background-color: #24a4c7;
+}
+#menujugar01 #botonborrar:hover {
+  background-color: #9b3838;
+}
+#menujugar01 #boton:active {
+  position: relative;
+  top: 1px;
+}
+
+/*------------- MOBILE----------------- */
+@media only screen and (min-width: 320px) {
+  .navbar-brand {
+    font-size: 25px;
+  }
+  #menuprincipal {
+    height: 800px;
+  }
+  h1 a {
+    font-size: 60px;
+    font-family: Fredoka;
+    font-weight: bold;
+  }
+  footer a,
+.copyright {
+    font-size: 16px;
+  }
+  .logo {
+    height: 100px;
+  }
+  #menujugar {
+    height: 800px;
+  }
+  #menujugar .jugar__titulos {
+    font-size: 40px;
+  }
+  #menujugar .container {
+    grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
+    grid-template-rows: 230px 230px 230px;
+  }
+  #menujugar .container .card {
+    height: 150px;
+    margin: 50px;
+  }
+  #menujugar .container img {
+    height: 150px;
+    width: auto;
+  }
+  #menujugar .container .intro {
+    height: 80px;
+    width: 250px;
+    padding: 6px;
+    top: 100px;
+  }
+  #menujugar .container .intro h1 {
+    margin: 5px;
+    font-size: 18px;
+  }
+  #menujugar .container .intro p {
+    font-size: 12px;
+    margin: 5px;
+  }
+  #menujugar .container .card:hover .intro {
+    height: 220px;
+    top: 90px;
+  }
+}
+/*------------- TABLET----------------- */
+@media only screen and (min-width: 768px) {
+  .navbar-brand {
+    font-size: 50px;
+  }
+  h1 a {
+    font-size: 80px;
+    font-family: Fredoka;
+    font-weight: bold;
+  }
+  footer a,
+.copyright {
+    font-size: 20px;
+  }
+  .logo {
+    height: 150px;
+  }
+  #menujugar {
+    height: 1150px;
+  }
+  #menujugar .jugar__titulos {
+    font-size: 50px;
+  }
+  #menujugar .container {
+    grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
+    grid-template-rows: 380px 380px 380px;
+  }
+  #menujugar .container .card {
+    height: 300px;
+    margin: 50px;
+  }
+  #menujugar .container img {
+    height: 300px;
+    width: auto;
+  }
+  #menujugar .container .intro {
+    height: 100px;
+    width: 350px;
+    padding: 6px;
+    top: 220px;
+  }
+  #menujugar .container .intro h1 {
+    margin: 5px;
+    font-size: 32px;
+  }
+  #menujugar .container .intro p {
+    font-size: 18px;
+    margin: 5px;
+  }
+  #menujugar .container .card:hover .intro {
+    height: 220px;
+    top: 200px;
+  }
+}
+/*------------- DESKTOP----------------- */
+@media only screen and (min-width: 992px) {
+  .nav-link {
+    font-size: 24px;
+  }
+  #menuprincipal {
+    height: 1000px;
+  }
+  h1 a {
+    font-size: 100px;
+    font-family: Fredoka;
+    font-weight: bold;
+  }
+  footer a,
+.copyright {
+    font-size: 24px;
+  }
+  #menujugar {
+    height: 1000px;
+  }
+  #menujugar .jugar__titulos {
+    font-size: 70px;
+  }
+  #menujugar .container {
+    grid-template-rows: 380px 380px;
+    grid-template-areas: "a1 a2 a3" "a4 a5 a6";
+  }
+  #menujugar .container .card {
+    height: 300px;
+    margin: 50px;
+  }
+  #menujugar .container img {
+    height: 300px;
+    width: auto;
+  }
+  #menujugar .container .intro {
+    height: 100px;
+    width: 350px;
+    padding: 6px;
+    top: 220px;
+  }
+  #menujugar .container .intro h1 {
+    margin: 5px;
+    font-size: 36px;
+  }
+  #menujugar .container .intro p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  #menujugar .container .card:hover .intro {
+    height: 220px;
+    top: 200px;
+  }
+  .pedido {
+    height: 300px;
+    width: 450px;
+  }
+  .pedido h1 {
+    font-size: 35px;
+  }
+  .dona_prep_base1 {
+    height: 200px;
+    width: 200px;
+  }
+  .dona_decoracion_base1 {
+    height: 150px;
+    width: 200px;
+  }
+  .segundos,
+.positivos,
+.negativos,
+.points {
+    font-size: 35px;
+  }
+  .right, .wrong, .seconds {
+    width: 150px;
+  }
+  .time_img, .ok_img, .wrong_img, .star_img {
+    padding-right: 1rem;
+  }
+  .avatar {
+    height: 80px;
+    width: auto;
+    padding-right: 1rem;
+  }
+  .lifes_img {
+    height: 50px;
+    width: auto;
+  }
+  .img_bg_game, .img_bg_game_1 {
+    width: 450px;
+  }
+  .img__ingredientes {
+    height: 150px;
+    width: auto;
+  }
+  .img__ingredientes_granas {
+    height: 120px;
+    width: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
