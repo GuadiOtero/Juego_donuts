@@ -25,12 +25,8 @@ let imgchange = document.getElementById("decoracion");
 let imgchange1 = document.getElementById("decoracionextra");
 let baseonechange = document.getElementById("basedecoracion1");
 let baseoneextrachange = document.getElementById("basedecoracionextra1");
-let puntaje = 0;
-let lifesbase = 5;
-let rightbase = 0;
-let wrongbase = 0;
-let secondsbase = 10;
 
+const lifes = document.getElementsByClassName("lifes_img");
 const startBtn = document.getElementById("botonstart");
 const addBtn = document.getElementById("botonagregar");
 const resetBtn = document.getElementById("botonborrar");
@@ -38,7 +34,14 @@ let seconds = document.getElementById("seconds");
 let right = document.getElementById("right");
 let wrong = document.getElementById("wrong");
 let points = document.getElementById("points");
-const lifes = document.getElementsByClassName("lifes_img");
+
+let secondsbase = 10;
+let puntaje = 0;
+let lifesbase = 5;
+let rightbase = 0;
+let wrongbase = 0;
+
+
 
 // asignación de funciones a los botones
 violetBtn.onclick = function () {
@@ -64,6 +67,30 @@ resetBtn.onclick = function () {
     imgchange.src = "../img/glase_transparente.png";
     imgchange1.src = "../img/glase_transparente.png";
 }
+//funcion tiempo cuenta regresiva
+
+function actualizarTiempo() {
+    if (secondsbase === 0) {
+        wrongbase++;
+        lifesbase--;
+        lifesdown();        
+        resetBtn.onclick();
+        startGame();
+    } else {        
+        secondsbase--;
+        setTimeout("actualizarTiempo()", 1000);
+    } 
+    right.innerHTML = rightbase;
+    wrong.innerHTML = wrongbase;
+    points.innerHTML = puntaje;
+    seconds.innerHTML = secondsbase;
+}
+// funcion q bloquea los botones        
+function bloquearfunciones(){
+    addBtn.disabled = true;
+    resetBtn.disabled = true;
+}  
+    
 
 // función de vidas disponibles
 lifesdown = function () {
@@ -78,6 +105,8 @@ lifesdown = function () {
     } else if (lifesbase === 0) {
         lifes[0].src = "../img/Heartlow.png";
         alert("gameover");
+        clearInterval(countdown);
+        bloquearfunciones();
     }
 }
 
@@ -87,16 +116,18 @@ userSelection = function () {
         puntaje += 100;
         rightbase++;
         resetBtn.onclick();
+        secondsbase = 500;
     } else {
         resetBtn.onclick();
         wrongbase++;
         lifesbase--;
         lifesdown();
+        secondsbase = 500;
     }
 
-    right.innerHTML = `${rightbase}`;
-    wrong.innerHTML = `${wrongbase}`;
-    points.innerHTML = `${puntaje}`;
+    right.innerHTML = rightbase;
+    wrong.innerHTML = wrongbase;
+    points.innerHTML = puntaje;
     startBtn.onclick();
 }
 
@@ -109,79 +140,78 @@ startGame = function () {
 
         baseonechange.src = donas[0].color;
         baseoneextrachange.src = donas[0].ingrediente;
-
+        actualizarTiempo();
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 1) {
 
         baseonechange.src = donas[1].color;
         baseoneextrachange.src = donas[1].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 2) {
 
         baseonechange.src = donas[2].color;
         baseoneextrachange.src = donas[2].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 3) {
 
         baseonechange.src = donas[3].color;
         baseoneextrachange.src = donas[3].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 4) {
 
         baseonechange.src = donas[4].color;
         baseoneextrachange.src = donas[4].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 5) {
 
         baseonechange.src = donas[5].color;
         baseoneextrachange.src = donas[5].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 6) {
 
         baseonechange.src = donas[6].color;
         baseoneextrachange.src = donas[6].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 7) {
 
         baseonechange.src = donas[7].color;
         baseoneextrachange.src = donas[7].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 8) {
 
         baseonechange.src = donas[8].color;
         baseoneextrachange.src = donas[8].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 9) {
 
         baseonechange.src = donas[9].color;
         baseoneextrachange.src = donas[9].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     } else if (generaProblema === 10) {
 
         baseonechange.src = donas[10].color;
         baseoneextrachange.src = donas[10].ingrediente;
+        actualizarTiempo();
 
         addBtn.onclick = () => userSelection();
-        finishBtn.onclick = () => userSelection();
     }
 }
 

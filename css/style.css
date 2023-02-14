@@ -412,6 +412,9 @@ footer .footer-li:hover {
 #menujugar01 #botonagregar:disabled {
   background-color: #70726f;
 }
+#menujugar01 #botonbrrar:disabled {
+  background-color: #70726f;
+}
 #menujugar01 #botonborrar {
   background-color: #DE4F4F;
   border-radius: 5px;
