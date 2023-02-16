@@ -149,12 +149,11 @@ footer {
     background-image: url(../img/background2.png);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+
     align-items: center;
 
     .jugar__titulos {
-        padding-top: 8%;
-        padding-bottom: 5%;
+        padding-top: 6%;
         font-family: 'Fredoka', sans-serif;
         color: $color_secundario;
     }
@@ -224,20 +223,20 @@ footer {
 
 
 
-    .container {
+    .container01 {
         margin-left: 5%;
         padding-top: 5%;
         padding-bottom: 5%;
-        display: grid; 
-        grid-template-columns: 1.3fr 0.7fr 1fr 1fr 1fr; 
-        grid-template-rows: 0.9fr 0.4fr 1.8fr 0.9fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          "pedido segundos positivos negativos img_bg_game"
-          "pedido dona_deco dona_deco dona_deco life_points"
-          "ingredientes dona_deco dona_deco dona_deco life_points"
-          "ingredientes dona_deco dona_deco dona_deco img_bg_game_1"; 
-      }
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr 1fr 1fr 1fr;
+        grid-template-rows: 0.9fr 0.4fr 1.8fr 0.9fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "pedido segundos positivos negativos img_bg_game"
+            "pedido dona_deco dona_deco dona_deco life_points"
+            "ingredientes dona_deco dona_deco dona_deco life_points"
+            "ingredientes dona_deco dona_deco dona_deco img_bg_game_1";
+    }
 
     .pedido {
         grid-area: pedido;
@@ -245,7 +244,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid #00ace0;
+        border: 3px solid #00ace0;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
         color: #0f1517;
@@ -255,6 +254,7 @@ footer {
         position: relative;
         width: 100%;
         height: 80%;
+
 
         .dona_base1 {
             position: absolute;
@@ -277,17 +277,21 @@ footer {
         justify-content: center;
         align-items: center;
         border-top: 3px solid #00ace0;
+        border-bottom: 3px solid #00ace0;
+        border-left: 3px solid #00ace0;
         padding: 1rem;
+        padding-left: 8rem;
         font-family: 'Fredoka', sans-serif;
         color: #0f1517;
-     }
+    }
 
-     .positivos {
+    .positivos {
         grid-area: positivos;
         display: flex;
         justify-content: center;
         align-items: center;
         border-top: 3px solid #00ace0;
+        border-bottom: 3px solid #00ace0;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
         color: #0f1517;
@@ -297,24 +301,27 @@ footer {
         grid-area: negativos;
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         border-top: 3px solid #00ace0;
+        border-bottom: 3px solid #00ace0;
+        border-right: 3px solid #00ace0;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
         color: #0f1517;
     }
 
 
-     .life_points {
+    .life_points {
         grid-area: life_points;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border: 1px solid #00ace0;
+        border: 3px solid #00ace0;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
         color: #0f1517;
     }
+
     #container_points {
         grid-area: puntos;
         display: flex;
@@ -343,7 +350,7 @@ footer {
         justify-content: center;
         align-items: center;
 
-        border: 1px solid #00ace0;
+        border: 3px solid #00ace0;
         padding: 1rem;
     }
 
@@ -354,7 +361,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid #00ace0;
+        border: 3px solid #00ace0;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
         color: #0f1517;
@@ -367,7 +374,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid #00ace0;
+        border: 3px solid #00ace0;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
         color: #0f1517;
@@ -381,7 +388,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #00ace0;
+        border: 3px solid #00ace0;
         padding: 1rem;
     }
 
@@ -485,7 +492,7 @@ footer {
     }
 
 
-    #botonagregar{
+    #botonagregar {
         background-color: #8ad7f0;
         border-radius: 5px;
         border: 1px solid #00ace0;
@@ -515,14 +522,17 @@ footer {
 
     #botonstart:disabled {
         background-color: #70726f;
+        border: 2px solid #323332;
     }
 
     #botonagregar:disabled {
         background-color: #70726f;
+        border: 2px solid #323332;
     }
 
-    #botonbrrar:disabled {
+    #botonborrar:disabled {
         background-color: #70726f;
+        border: 2px solid #323332;
     }
 
     #botonborrar {
@@ -543,7 +553,7 @@ footer {
         background-color: #589b39;
     }
 
-    #botonagregar:hover{
+    #botonagregar:hover {
         background-color: #24a4c7;
     }
 
@@ -742,6 +752,7 @@ footer {
 
         .jugar__titulos {
             font-size: 70px;
+
         }
 
         .container {
@@ -790,8 +801,9 @@ footer {
     .pedido {
         height: 300px;
         width: 450px;
-        h1{
-        font-size: 35px;
+
+        h1 {
+            font-size: 35px;
         }
     }
 
@@ -808,32 +820,39 @@ footer {
     .segundos,
     .positivos,
     .negativos,
-    .points{
+    .points {
         font-size: 35px;
 
     }
-    .right, .wrong, .seconds{
+
+    .right,
+    .wrong,
+    .seconds {
         width: 150px;
     }
 
-    .time_img, .ok_img, .wrong_img, .star_img{
+    .time_img,
+    .ok_img,
+    .wrong_img,
+    .star_img {
         padding-right: 1rem;
 
     }
 
-    .avatar{
+    .avatar {
         height: 80px;
         width: auto;
         padding-right: 1rem;
     }
 
-    .lifes_img{
+    .lifes_img {
         height: 50px;
         width: auto;
-        
+
     }
 
-    .img_bg_game, .img_bg_game_1{        
+    .img_bg_game,
+    .img_bg_game_1 {
         width: 450px;
     }
 

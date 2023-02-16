@@ -115,12 +115,10 @@ footer .footer-li:hover {
   background-image: url(../img/background2.png);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
 #menujugar .jugar__titulos {
-  padding-top: 8%;
-  padding-bottom: 5%;
+  padding-top: 6%;
   font-family: "Fredoka", sans-serif;
   color: #0F1517;
 }
@@ -171,7 +169,7 @@ footer .footer-li:hover {
 #menujugar01 {
   background-image: url(../img/background2.png);
 }
-#menujugar01 .container {
+#menujugar01 .container01 {
   margin-left: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
@@ -187,7 +185,7 @@ footer .footer-li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #00ace0;
+  border: 3px solid #00ace0;
   padding: 1rem;
   font-family: "Fredoka", sans-serif;
   color: #0f1517;
@@ -213,7 +211,10 @@ footer .footer-li:hover {
   justify-content: center;
   align-items: center;
   border-top: 3px solid #00ace0;
+  border-bottom: 3px solid #00ace0;
+  border-left: 3px solid #00ace0;
   padding: 1rem;
+  padding-left: 8rem;
   font-family: "Fredoka", sans-serif;
   color: #0f1517;
 }
@@ -223,6 +224,7 @@ footer .footer-li:hover {
   justify-content: center;
   align-items: center;
   border-top: 3px solid #00ace0;
+  border-bottom: 3px solid #00ace0;
   padding: 1rem;
   font-family: "Fredoka", sans-serif;
   color: #0f1517;
@@ -233,6 +235,8 @@ footer .footer-li:hover {
   justify-content: center;
   align-items: center;
   border-top: 3px solid #00ace0;
+  border-bottom: 3px solid #00ace0;
+  border-right: 3px solid #00ace0;
   padding: 1rem;
   font-family: "Fredoka", sans-serif;
   color: #0f1517;
@@ -242,7 +246,7 @@ footer .footer-li:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid #00ace0;
+  border: 3px solid #00ace0;
   padding: 1rem;
   font-family: "Fredoka", sans-serif;
   color: #0f1517;
@@ -269,7 +273,7 @@ footer .footer-li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #00ace0;
+  border: 3px solid #00ace0;
   padding: 1rem;
 }
 #menujugar01 .img_bg_game {
@@ -279,7 +283,7 @@ footer .footer-li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #00ace0;
+  border: 3px solid #00ace0;
   padding: 1rem;
   font-family: "Fredoka", sans-serif;
   color: #0f1517;
@@ -291,7 +295,7 @@ footer .footer-li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #00ace0;
+  border: 3px solid #00ace0;
   padding: 1rem;
   font-family: "Fredoka", sans-serif;
   color: #0f1517;
@@ -301,7 +305,7 @@ footer .footer-li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #00ace0;
+  border: 3px solid #00ace0;
   padding: 1rem;
 }
 #menujugar01 .container_ingredientes {
@@ -408,12 +412,15 @@ footer .footer-li:hover {
 }
 #menujugar01 #botonstart:disabled {
   background-color: #70726f;
+  border: 2px solid #323332;
 }
 #menujugar01 #botonagregar:disabled {
   background-color: #70726f;
+  border: 2px solid #323332;
 }
-#menujugar01 #botonbrrar:disabled {
+#menujugar01 #botonborrar:disabled {
   background-color: #70726f;
+  border: 2px solid #323332;
 }
 #menujugar01 #botonborrar {
   background-color: #DE4F4F;
@@ -456,7 +463,7 @@ footer .footer-li:hover {
     font-weight: bold;
   }
   footer a,
-.copyright {
+  .copyright {
     font-size: 16px;
   }
   .logo {
@@ -510,7 +517,7 @@ footer .footer-li:hover {
     font-weight: bold;
   }
   footer a,
-.copyright {
+  .copyright {
     font-size: 20px;
   }
   .logo {
@@ -567,7 +574,7 @@ footer .footer-li:hover {
     font-weight: bold;
   }
   footer a,
-.copyright {
+  .copyright {
     font-size: 24px;
   }
   #menujugar {
@@ -622,15 +629,20 @@ footer .footer-li:hover {
     width: 200px;
   }
   .segundos,
-.positivos,
-.negativos,
-.points {
+  .positivos,
+  .negativos,
+  .points {
     font-size: 35px;
   }
-  .right, .wrong, .seconds {
+  .right,
+  .wrong,
+  .seconds {
     width: 150px;
   }
-  .time_img, .ok_img, .wrong_img, .star_img {
+  .time_img,
+  .ok_img,
+  .wrong_img,
+  .star_img {
     padding-right: 1rem;
   }
   .avatar {
@@ -642,7 +654,8 @@ footer .footer-li:hover {
     height: 50px;
     width: auto;
   }
-  .img_bg_game, .img_bg_game_1 {
+  .img_bg_game,
+  .img_bg_game_1 {
     width: 450px;
   }
   .img__ingredientes {

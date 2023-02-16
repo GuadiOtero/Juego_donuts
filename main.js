@@ -26,6 +26,7 @@ let imgchange1 = document.getElementById("decoracionextra");
 let baseonechange = document.getElementById("basedecoracion1");
 let baseoneextrachange = document.getElementById("basedecoracionextra1");
 
+
 const lifes = document.getElementsByClassName("lifes_img");
 const startBtn = document.getElementById("botonstart");
 const addBtn = document.getElementById("botonagregar");
@@ -35,7 +36,7 @@ let right = document.getElementById("right");
 let wrong = document.getElementById("wrong");
 let points = document.getElementById("points");
 
-let secondsbase = 10;
+
 let puntaje = 0;
 let lifesbase = 5;
 let rightbase = 0;
@@ -43,54 +44,63 @@ let wrongbase = 0;
 
 
 
+
 // asignación de funciones a los botones
 violetBtn.onclick = function () {
-    imgchange.src = "../img/glase_violeta.png";
+    imgchange.src = donas[0].color;
 }
 pinkBtn.onclick = function () {
-    imgchange.src = "../img/glase_rosa.png";
+    imgchange.src = donas[1].color;
 }
 skyblueBtn.onclick = function () {
-    imgchange.src = "../img/glase_celeste.png";
+    imgchange.src = donas[2].color;
 }
 greenBtn.onclick = function () {
-    imgchange.src = "../img/glase_verde.png";
+    imgchange.src = donas[3].color;
 }
 yellowBtn.onclick = function () {
-    imgchange.src = "../img/glase_amarillo.png";
+    imgchange.src = donas[4].color;
 }
 sprinklesBtn.onclick = function () {
-    imgchange1.src = "../img/glase_granas.png";
+    imgchange1.src = donas[10].ingrediente;
 }
 
 resetBtn.onclick = function () {
-    imgchange.src = "../img/glase_transparente.png";
-    imgchange1.src = "../img/glase_transparente.png";
+    imgchange.src = donas[0].ingrediente;
+    imgchange1.src = donas[0].ingrediente;
 }
+
+// funcion q bloquea los botones        
+function bloquearfunciones() {
+    addBtn.disabled = true;
+    resetBtn.disabled = true;
+}
+
+
 //funcion tiempo cuenta regresiva
 
-function actualizarTiempo() {
-    if (secondsbase === 0) {
-        wrongbase++;
-        lifesbase--;
-        lifesdown();        
-        resetBtn.onclick();
-        startGame();
-    } else {        
+let secondsbase = 3;
+let counter;
+
+function actualizarTiempo(secondsbase) {
+    counter = setInterval(timer, 1000);
+    function timer() {
+        seconds.innerHTML = secondsbase;
         secondsbase--;
-        setTimeout("actualizarTiempo()", 1000);
-    } 
+        if (secondsbase < 0) {
+            wrongbase++;
+            lifesbase--;
+            lifesdown();
+            resetBtn.onclick();
+            startGame();
+        }
+    }
     right.innerHTML = rightbase;
     wrong.innerHTML = wrongbase;
     points.innerHTML = puntaje;
     seconds.innerHTML = secondsbase;
 }
-// funcion q bloquea los botones        
-function bloquearfunciones(){
-    addBtn.disabled = true;
-    resetBtn.disabled = true;
-}  
-    
+
 
 // función de vidas disponibles
 lifesdown = function () {
@@ -104,9 +114,6 @@ lifesdown = function () {
         lifes[1].src = "../img/Heartlow.png";
     } else if (lifesbase === 0) {
         lifes[0].src = "../img/Heartlow.png";
-        alert("gameover");
-        clearInterval(countdown);
-        bloquearfunciones();
     }
 }
 
@@ -116,102 +123,111 @@ userSelection = function () {
         puntaje += 100;
         rightbase++;
         resetBtn.onclick();
-        secondsbase = 500;
     } else {
         resetBtn.onclick();
         wrongbase++;
         lifesbase--;
         lifesdown();
-        secondsbase = 500;
     }
-
     right.innerHTML = rightbase;
     wrong.innerHTML = wrongbase;
     points.innerHTML = puntaje;
-    startBtn.onclick();
+    startGame();
 }
 
 // función principal del juego, generador random de combinaciones
 startGame = function () {
-    startBtn.disabled = true;
-    let generaProblema = Math.round(Math.random() * 10);
+    if (lifesbase === 0) {
+        alert("perdiste!!");
+        seconds.innerHTML = secondsbase;
+        clearInterval(counter);
+        bloquearfunciones();
+    } else {
+        startBtn.disabled = true;
+        let generaProblema = Math.round(Math.random() * 10);
 
-    if (generaProblema === 0) {
-
-        baseonechange.src = donas[0].color;
-        baseoneextrachange.src = donas[0].ingrediente;
-        actualizarTiempo();
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 1) {
-
-        baseonechange.src = donas[1].color;
-        baseoneextrachange.src = donas[1].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 2) {
-
-        baseonechange.src = donas[2].color;
-        baseoneextrachange.src = donas[2].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 3) {
-
-        baseonechange.src = donas[3].color;
-        baseoneextrachange.src = donas[3].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 4) {
-
-        baseonechange.src = donas[4].color;
-        baseoneextrachange.src = donas[4].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 5) {
-
-        baseonechange.src = donas[5].color;
-        baseoneextrachange.src = donas[5].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 6) {
-
-        baseonechange.src = donas[6].color;
-        baseoneextrachange.src = donas[6].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 7) {
-
-        baseonechange.src = donas[7].color;
-        baseoneextrachange.src = donas[7].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 8) {
-
-        baseonechange.src = donas[8].color;
-        baseoneextrachange.src = donas[8].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 9) {
-
-        baseonechange.src = donas[9].color;
-        baseoneextrachange.src = donas[9].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
-    } else if (generaProblema === 10) {
-
-        baseonechange.src = donas[10].color;
-        baseoneextrachange.src = donas[10].ingrediente;
-        actualizarTiempo();
-
-        addBtn.onclick = () => userSelection();
+        switch (generaProblema) {
+            case 0:
+              baseonechange.src = donas[0].color;
+              baseoneextrachange.src = donas[0].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 1:
+              baseonechange.src = donas[1].color;
+              baseoneextrachange.src = donas[1].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 2:
+              baseonechange.src = donas[2].color;
+              baseoneextrachange.src = donas[2].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 3:
+              baseonechange.src = donas[3].color;
+              baseoneextrachange.src = donas[3].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 4:
+              baseonechange.src = donas[4].color;
+              baseoneextrachange.src = donas[4].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 5:
+              baseonechange.src = donas[5].color;
+              baseoneextrachange.src = donas[5].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 6:
+              baseonechange.src = donas[6].color;
+              baseoneextrachange.src = donas[6].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 7:
+              baseonechange.src = donas[7].color;
+              baseoneextrachange.src = donas[7].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 8:
+              baseonechange.src = donas[8].color;
+              baseoneextrachange.src = donas[8].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 9:
+              baseonechange.src = donas[9].color;
+              baseoneextrachange.src = donas[9].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            case 10:
+              baseonechange.src = donas[10].color;
+              baseoneextrachange.src = donas[10].ingrediente;
+              clearInterval(counter);
+              actualizarTiempo(secondsbase);
+              addBtn.onclick = () => userSelection();
+              break;
+            default:
+              console.log("Error 🙀");
+              break;
+          }
     }
 }
 
