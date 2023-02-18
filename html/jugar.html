@@ -14,14 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/icono.png">
+    <link rel="icon" href="../img/Bella.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Kitten Donuts</title>
 </head>
 
 <body>
-
+    <div class="nav_img"></div>
     <nav class="navbar navbar-expand-lg" style="background-color: #9ADBEB;">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">Kitten Donuts</a>
@@ -48,74 +48,201 @@
         </div>
     </nav>
 
-    <main id="menujugar">
+    <main id="mainjugar">
+        <div id="menujugar01">
+            <div class="container01">
 
-        <h1 class="jugar__titulos">Elegí un personaje</h1>
-
-        <div class="container">
-
-            <a href="./jugar_01.html">
-                <div class="card">
-                    <img src="../img/Bella.png" alt="personaje gato color beige" id="Bella">
-                    <div class="intro">
-                        <h1>Bella</h1>
-                        <p>Elegir</p>
+                <div class="pedido">
+                    <h1>Pedido</h1>
+                    <div class="base">
+                        <div class="dona_base1" id="basepedido1">
+                            <img src="../img/dona_sola_1.png" alt="dona" class="dona_prep_base1">
+                        </div>
+                        <div class="dona_decoracion_base1">
+                            <img src="../img/glase_transparente.png" alt="glaseado" id="basedecoracion1"
+                                class="dona_prep_base1">
+                        </div>
+                        <div class="dona_decoracion_base1">
+                            <img src="../img/glase_transparente.png" alt="glaseado" id="basedecoracionextra1"
+                                class="dona_prep_base1">
+                        </div>
                     </div>
                 </div>
-            </a>
 
-            <a href="./jugar_01.html" id="btn_avatar1">
-            <div class="card">
-                <img src="../img/Choco.png" alt="personaje gato color marron" id="Choco">
-                <div class="intro">
-                    <h1>Choco</h1>
-                    <p>Elegir</p>
+                <div class="life">
+                    <div id="container_lifes">
+
+                        <img src="../img/logo.png" alt="avatar" class="avatar" id="avatar_life">
+                        <div id="lifes" class="lifes">
+                            <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                            <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                            <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                            <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                            <img src="../img/Love.png" alt="corazon rojo" class="lifes_img">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="img_bg_game">
+
+                </div>
+                <div class="points_section">
+                    
+                    <div class="segundos">
+                        <img src="../img/Time.png" alt="reloj" class="time_img">
+                        <div id="seconds" class="seconds"></div>
+                    </div>
+
+                    <div class="positivos">
+                        <img src="../img/Done.png" alt="tilde verde" class="ok_img">
+                        <div id="right" class="right"></div>
+                    </div>
+                    <div class="negativos">
+                        <img src="../img/Close.png" alt="x roja" class="wrong_img">
+                        <div id="wrong" class="wrong"></div>
+                    </div>
+                    <div id="container_points">
+                        <img src="../img/Star.png" alt="estrella" class="star_img">
+                        <div id="points" class="points"></div>
+                    </div>
+
+
+                </div>
+                <div class="img_bg_game_1">
+
+                </div>
+
+                <div class="dona_deco">
+                    <div class="plato_solo">
+                        <img src="../img/plato.png" alt="plato" class="dona_preparar">
+                        <div class="dona_preparar_sola" id="dona_sola">
+                            <img src="../img/dona_sola_1.png" alt="dona" class="dona_prep_sola">
+                        </div>
+                        <div class="dona_decoracion_sola">
+                            <img src="../img/glase_transparente.png" alt="glaseado" id="decoracion"
+                                class="dona_prep_sola">
+                        </div>
+                        <div class="dona_decoracion_sola">
+                            <img src="../img/glase_transparente.png" alt="glaseado" id="decoracionextra"
+                                class="dona_prep_sola">
+                        </div>
+                    </div>
+                    <div class="botones_plato">
+                        <input type="button" name="" value="Comenzar" id="botonstart">
+                        <input type="button" name="" value="Borrar" id="botonborrar">
+                        <input type="button" name="" value="Agregar" id="botonagregar">
+                    </div>
+                </div>
+                <div class="ingredientes">
+                    <div class="container_ingredientes">
+                        <div class="ingrediente violeta">
+                            <button id="mg_violeta">
+                                <img src="../img/ingrediente_violeta.png" alt="manga con glasé violeta"
+                                    class="img__ingredientes">
+                            </button>
+                        </div>
+                        <div class="ingrediente rosa">
+                            <button id="mg_rosa">
+                                <img src="../img/ingrediente_rosa.png" alt="manga con glasé rosa"
+                                    class="img__ingredientes">
+                            </button>
+                        </div>
+                        <div class="ingrediente celeste">
+                            <button id="mg_celeste">
+                                <img src="../img/ingrediente_celeste.png" alt="manga con glasé celeste"
+                                    class="img__ingredientes">
+                            </button>
+                        </div>
+                        <div class="ingrediente verde">
+                            <button id="mg_verde">
+                                <img src="../img/ingrediente_verde.png" alt="manga con glasé verde"
+                                    class="img__ingredientes">
+                            </button>
+                        </div>
+                        <div class="ingrediente amarillo">
+                            <button id="mg_amarillo">
+                                <img src="../img/ingrediente_amarillo.png" alt="manga con glasé amarillo"
+                                    class="img__ingredientes">
+                            </button>
+                        </div>
+                        <div class="ingrediente granas">
+                            <button id="mg_granas">
+                                <img src="../img/ingrediente_granas.png" alt="bowl con granas"
+                                    class="img__ingredientes_granas">
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </a>
-
-        <a href="./jugar_01.html" id="btn_avatar2">
-            <div class="card">
-                <img src="../img/Lana.png" alt="personaje gato color gris" id="Lana">
-                <div class="intro">
-                    <h1>Lana</h1>
-                    <p>Elegir</p>
-                </div>
-            </div>
-        </a>
-
-            <a href="./jugar_01.html" id="btn_avatar3">
-            <div class="card">
-                <img src="../img/Mittens.png" alt="personaje gato color blanco" id="Mittensimg">
-                <div class="intro">
-                    <h1>Mittens</h1>
-                    <p>Elegir</p>
-                </div>
-            </div>
-        </a>
-
-            <a href="./jugar_01.html" id="btn_avatar4">
-            <div class="card" >
-                <img src="../img/Nugget.png" alt="personaje gato color negro" id="Nuggetimg">
-                <div class="intro">
-                    <h1>Nugget</h1>
-                    <p>Elegir</p>
-                </div>
-            </div>
-        </a>
-
-            <a href="./jugar_01.html" id="btn_avatar5">
-            <div class="card">
-                <img src="../img/Pumpkin.png" alt="personaje gato color marron claro" id="Pumpkinimg">
-                <div class="intro">
-                    <h1>Pumpkin</h1>
-                    <p>Elegir</p>
-                </div>
-            </div>
-        </a>
         </div>
+        <div id="menujugar">
 
+            <h1 class="jugar__titulos">Elegí un personaje</h1>
 
+            <div class="container">
+
+                <a href="./jugar_01.html">
+                    <div class="card">
+                        <img src="../img/Bella.png" alt="personaje gato color beige" id="Bella">
+                        <div class="intro">
+                            <h1>Bella</h1>
+                            <p>Elegir</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./jugar_01.html" id="btn_avatar1">
+                    <div class="card">
+                        <img src="../img/Choco.png" alt="personaje gato color marron" id="Choco">
+                        <div class="intro">
+                            <h1>Choco</h1>
+                            <p>Elegir</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./jugar_01.html" id="btn_avatar2">
+                    <div class="card">
+                        <img src="../img/Lana.png" alt="personaje gato color gris" id="Lana">
+                        <div class="intro">
+                            <h1>Lana</h1>
+                            <p>Elegir</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./jugar_01.html" id="btn_avatar3">
+                    <div class="card">
+                        <img src="../img/Mittens.png" alt="personaje gato color blanco" id="Mittensimg">
+                        <div class="intro">
+                            <h1>Mittens</h1>
+                            <p>Elegir</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./jugar_01.html" id="btn_avatar4">
+                    <div class="card">
+                        <img src="../img/Nugget.png" alt="personaje gato color negro" id="Nuggetimg">
+                        <div class="intro">
+                            <h1>Nugget</h1>
+                            <p>Elegir</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./jugar_01.html" id="btn_avatar5">
+                    <div class="card">
+                        <img src="../img/Pumpkin.png" alt="personaje gato color marron claro" id="Pumpkinimg">
+                        <div class="intro">
+                            <h1>Pumpkin</h1>
+                            <p>Elegir</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
 
     </main>
 
