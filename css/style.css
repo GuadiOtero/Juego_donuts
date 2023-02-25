@@ -14,7 +14,7 @@ body {
 .nav_img {
   background-image: url(../img/background2.png);
   background-size: cover;
-  height: 100px;
+  height: 40px;
 }
 
 .navbar-brand {
@@ -166,7 +166,7 @@ footer .footer-li:hover {
   align-items: center;
 }
 #mainjugar #menujugar .jugar__titulos {
-  padding-top: 6%;
+  padding-top: 1.5rem;
   font-family: "Fredoka", sans-serif;
   color: #0F1517;
 }
@@ -188,7 +188,7 @@ footer .footer-li:hover {
   position: absolute;
   background-color: #0F1517;
   opacity: 0.5;
-  color: wheat;
+  color: rgb(179, 232, 245);
   transition: 0.5s;
 }
 #mainjugar #menujugar .container .intro h1 {
@@ -250,18 +250,13 @@ footer .footer-li:hover {
 }
 #mainjugar .base {
   position: relative;
-  width: 100%;
-  height: 80%;
 }
 #mainjugar .base .dona_base1 {
   position: absolute;
-  top: 2%;
-  right: 19%;
 }
 #mainjugar .base .dona_decoracion_base1 {
   position: absolute;
-  top: 0.5%;
-  right: 19%;
+  top: -1%;
 }
 #mainjugar .life {
   grid-area: life;
@@ -317,10 +312,6 @@ footer .footer-li:hover {
   grid-area: img_bg_game;
   border-radius: 0px 10px 0px 0px;
   background-image: url(../img/bg.png);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border: 0.5px solid #8ad7f0;
   padding: 1rem;
   font-family: "Fredoka", sans-serif;
@@ -330,10 +321,6 @@ footer .footer-li:hover {
   grid-area: img_bg_game_1;
   border-radius: 0px 0px 10px 0px;
   background-image: url(../img/bg.png);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border: 0.5px solid #8ad7f0;
   padding: 1rem;
   font-family: "Fredoka", sans-serif;
@@ -390,7 +377,7 @@ footer .footer-li:hover {
 }
 #mainjugar .plato_solo {
   position: relative;
-  height: 80%;
+  height: 70%;
   width: auto;
 }
 #mainjugar .botones_plato {
@@ -407,17 +394,13 @@ footer .footer-li:hover {
 }
 #mainjugar .dona_preparar_sola {
   position: absolute;
-  top: 18%;
-  left: 18%;
+  top: 9%;
+  left: 9%;
 }
 #mainjugar .dona_decoracion_sola {
   position: absolute;
-  top: 17.9%;
-  left: 18.6%;
-}
-#mainjugar .dona_prep_sola {
-  height: 20%;
-  width: auto;
+  top: 8%;
+  left: 9%;
 }
 #mainjugar .dona_finalizar {
   height: 30%;
@@ -507,11 +490,17 @@ footer .footer-li:hover {
 }
 #ranking_main .ranking_cards {
   display: flex;
-  justify-content: space-around;
-  padding: 1.5rem;
+  gap: 25%;
+  padding: 1rem;
+  padding-left: 4rem;
   align-items: center;
   border-bottom: 0.5px solid #fdfdfd;
   background-color: rgba(255, 255, 255, 0.6);
+}
+#ranking_main .ranking_cards .textranking {
+  display: flex;
+  width: 10%;
+  justify-content: flex-start;
 }
 #ranking_main .ranking_titulos {
   display: flex;
@@ -640,6 +629,9 @@ footer .footer-li:hover {
 }
 /*------------- DESKTOP----------------- */
 @media only screen and (min-width: 992px) {
+  .navbar-brand {
+    font-size: 40px;
+  }
   .nav-link {
     font-size: 24px;
   }
@@ -656,34 +648,33 @@ footer .footer-li:hover {
     font-size: 24px;
   }
   #mainjugar {
-    height: 1000px;
+    height: 900px;
   }
   #container01 {
     width: 100px;
   }
   #menujugar {
-    height: 900px;
+    height: 700px;
   }
   #menujugar .jugar__titulos {
-    font-size: 60px;
+    font-size: 48px;
   }
   #menujugar .container {
-    grid-template-rows: 380px 380px;
+    grid-template-rows: 280px 280px;
     grid-template-areas: "a1 a2 a3" "a4 a5 a6";
   }
   #menujugar .container .card {
-    height: 300px;
+    height: 250px;
     margin: 50px;
   }
   #menujugar .container img {
-    height: 300px;
+    height: 250px;
     width: auto;
   }
   #menujugar .container .intro {
     height: 100px;
     width: 350px;
-    padding: 6px;
-    top: 220px;
+    top: 180px;
   }
   #menujugar .container .intro h1 {
     margin: 5px;
@@ -695,34 +686,41 @@ footer .footer-li:hover {
   }
   #menujugar .container .card:hover .intro {
     height: 220px;
-    top: 200px;
+    top: 150px;
   }
-  #menujugar01 {
-    height: 1000px;
+  .container01 {
+    height: 800px;
   }
   .pedido {
-    height: 300px;
+    height: 280px;
     width: auto;
   }
   .pedido h1 {
-    font-size: 35px;
+    font-size: 26px;
+  }
+  .base {
+    width: 200px;
+    height: 200px;
   }
   .dona_prep_base1 {
     height: 200px;
     width: 200px;
   }
   .dona_decoracion_base1 {
-    height: 150px;
-    width: 200px;
+    height: 200px;
+    width: 250px;
+  }
+  .dona_prep_sola {
+    height: 300px;
   }
   .life {
-    width: 300px;
+    height: 200px;
   }
   .segundos,
   .positivos,
   .negativos,
   .points {
-    font-size: 35px;
+    font-size: 26px;
   }
   .dona_deco {
     width: auto;
@@ -732,41 +730,43 @@ footer .footer-li:hover {
   .wrong_img,
   .star_img {
     padding-right: 1rem;
+    height: 52px;
   }
   .avatar {
     height: 80px;
     width: auto;
-    padding-right: 1rem;
   }
   .lifes_img {
     height: 50px;
     width: auto;
   }
   .img_bg_game,
-  .img_bg_game_1,
-  .points_section {
-    width: 400px;
+  .img_bg_game_1 {
+    width: 300px;
+    height: 200px;
+  }
+  .points_section.avatar {
+    height: 500px;
   }
   .img__ingredientes {
-    height: 150px;
+    height: 130px;
     width: auto;
   }
   .img__ingredientes_granas {
-    height: 120px;
+    height: 110px;
     width: auto;
   }
 }
-#ranking_main {
-  height: 1000px;
+#ranking_container {
+  height: 800px;
+  width: 40%;
 }
-#ranking_main #ranking_container {
-  height: 900px;
-  width: 50%;
-}
-#ranking_main .gamer_avatar {
+
+.gamer_avatar {
   height: 100px;
 }
-#ranking_main .gamer_name,
-#ranking_main .gamer_points {
+
+.gamer_name,
+.gamer_points {
   font-size: 30px;
 }/*# sourceMappingURL=style.css.map */

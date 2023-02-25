@@ -47,7 +47,7 @@ let rightbase = 0;
 let wrongbase = 0;
 // Displays de los pasos para jugar
 let avatarDisplay = document.getElementById("menujugar");
-let nameDisplay = document.getElementById("ingreseNombre"); 
+let nameDisplay = document.getElementById("ingreseNombre");
 let gameDisplay = document.getElementById("gamedisplay");
 
 //array para jugadores (ranking)
@@ -62,9 +62,9 @@ class Player {
     }
 }
 
-playerOne = new Player("../img/Bella.png", "Bella", 4000);
-playerTwo = new Player("../img/Choco.png", "Choco", 2000);
-playerThree = new Player("../img/Lana.png", "Lana", 1000);
+playerOne = new Player("../img/Bella.png", "Bella", 500);
+playerTwo = new Player("../img/Choco.png", "Choco", 1690);
+playerThree = new Player("../img/Lana.png", "Lana", 110);
 
 let avatarGamer = localStorage.getItem("avatar");
 let nameGamer = localStorage.getItem("gamer");
@@ -77,38 +77,42 @@ const addPlayer3 = players.push(playerThree);
 const rankingContainer = document.getElementById("ranking_container");
 
 // funcion para aplicar resultados en el ranking
+
 function gamerRanking() {
     gameDisplay.remove();
     let avatarGamer = localStorage.getItem("avatar");
     let nameGamer = localStorage.getItem("gamer");
     let pointsGamer = localStorage.getItem("points");
 
-    newPlayer = new Player (avatarGamer, nameGamer, pointsGamer);
+    newPlayer = new Player(avatarGamer, nameGamer, pointsGamer);
     players.push(newPlayer);
-    
-  let newRanking = document.createElement("div");
-    newRanking.innerHTML = `<div class="ranking_cards">
-    <img src="${avatarGamer}" alt="" class="gamer_avatar">
-    <p class="gamer_name">${nameGamer}</p>
-    <p class="gamer_points">${pointsGamer}</p>
-    </div>`;
-    rankingContainer.appendChild(newRanking); 
+    console.log(newPlayer);
+
+    players.sort((a, b) => {
+        if (a.point > b.point) {
+            return -1;
+        } else if (a.point < b.point) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+
+    players.sort().forEach(item => {
+        div = document.createElement("div");
+        div.innerHTML = `<div class="ranking_cards">
+        <img src="${item.avatar}" alt="" class="gamer_avatar">
+        <div class="textranking"><p class="gamer_name">${item.rankName}</p></div>
+        <p class="gamer_points">${item.point}</p>
+        </div>`;
+        rankingContainer.appendChild(div);
+    })
     rankingContainer.classList.add("open-ranking");
 }
 
-players.forEach(item => {
-    div = document.createElement("div");
-    div.innerHTML = `<div class="ranking_cards">
-    <img src="${item.avatar}" alt="" class="gamer_avatar">
-    <p class="gamer_name">${item.rankName}</p>
-    <p class="gamer_points">${item.point}</p>
-    </div>`;
-    rankingContainer.appendChild(div);
-})
-
 // este boton captura el nombre del jugador
 nameBtn.addEventListener("click", () => {
-    let name = document.getElementById("gamerOn");      
+    let name = document.getElementById("gamerOn");
     name = name.value;
     localStorage.setItem("gamer", name);
     gamerName.innerHTML = name;
@@ -252,7 +256,7 @@ startGame = function () {
         bloquearfunciones();
         localStorage.setItem("points", puntaje);
         gamerRanking();
-    } else if (puntaje === 200) {
+    } else if (puntaje === 10000) {
         alert("ganaste!!");
         seconds.innerHTML = secondsbase;
         clearInterval(counter);
