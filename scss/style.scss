@@ -144,7 +144,7 @@ footer {
 
 }
 
-//JUGAR01//
+//JUGAR//
 
 #mainjugar {
     background-image: url(../img/background.png);
@@ -154,10 +154,10 @@ footer {
     align-items: center;
     justify-content: center;
 
+    // INGRESAR NOMBRE 
 
     #ingreseNombre {
         position: absolute;
-        height: 300px;
         background-color: #ffffff99;
         border: 0.5px solid #fdfdfd;
         border-radius: 30px;
@@ -168,14 +168,6 @@ footer {
         padding: 1.5rem;
         font-family: 'Fredoka', sans-serif;
 
-
-        input {
-            height: 40px;
-            width: 300px;
-            font-size: 26px;
-        }
-
-
         button {
             background-color: #8ad7f0;
             border-radius: 5px;
@@ -183,13 +175,13 @@ footer {
             display: inline-block;
             cursor: pointer;
             color: #0f1517;
-            font-size: 17px;
             font-weight: bold;
             padding: 1% 3%;
             text-decoration: none;
         }
     }
 
+    // SELECCION DE AVATAR 
     #menujugar {
         position: absolute;
         background-color: #ffffff99;
@@ -270,7 +262,7 @@ footer {
         visibility: visible;
     }
 
-
+    // JUEGO 
     .container01 {
         margin: 3%;
         padding: 1%;
@@ -278,15 +270,6 @@ footer {
         border: 0.5px solid #fdfdfd;
         border-radius: 30px;
         padding-top: 1.5rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 0.4fr 1.6fr 1fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            "pedido life life img_bg_game"
-            "pedido dona_deco dona_deco points_section"
-            "ingredientes dona_deco dona_deco points_section"
-            "ingredientes dona_deco dona_deco img_bg_game_1";
         visibility: hidden;
     }
 
@@ -296,7 +279,6 @@ footer {
 
     .pedido {
         grid-area: pedido;
-        border-radius: 10px 0px 0px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -336,9 +318,6 @@ footer {
 
     .points_section {
         grid-area: points_section;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         font-family: 'Fredoka', sans-serif;
         color: #0f1517;
         border-top: 0.5px solid #8ad7f0;
@@ -383,7 +362,6 @@ footer {
         grid-area: img_bg_game;
         border-radius: 0px 10px 0px 0px;
         background-image: url(../img/bg.png);
-
         border: 0.5px solid #8ad7f0;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
@@ -394,7 +372,6 @@ footer {
         grid-area: img_bg_game_1;
         border-radius: 0px 0px 10px 0px;
         background-image: url(../img/bg.png);
-
         border: 0.5px solid #8ad7f0;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
@@ -403,7 +380,6 @@ footer {
 
     .ingredientes {
         grid-area: ingredientes;
-        border-radius: 0px 0px 0px 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -413,14 +389,8 @@ footer {
 
     .container_ingredientes {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
-        grid-template-areas:
-            "ingrediente_violeta ingrediente_rosa"
-            "ingrediente_celeste ingrediente_verde"
-            "ingrediente_amarillo ingrediente_granas";
         justify-content: center;
         align-items: center;
     }
@@ -466,8 +436,6 @@ footer {
 
     .plato_solo {
         position: relative;
-        height: 70%;
-        width: auto;
     }
 
     .botones_plato {
@@ -477,28 +445,6 @@ footer {
         gap: 1rem;
         padding: 2%;
     }
-
-    .dona_preparar {
-        height: 100%;
-        width: auto;
-        margin-bottom: 2%;
-    }
-
-    .dona_preparar_sola {
-        position: absolute;
-        top: 9%;
-        left: 9%;
-
-    }
-
-    .dona_decoracion_sola {
-        position: absolute;
-        top: 8%;
-        left: 9%;
-
-    }
-
-
 
     .dona_finalizar {
         height: 30%;
@@ -660,12 +606,38 @@ footer {
     }
 
     //JUGAR//
+    #mainjugar {
+        height: 800px;
+    }
+
+
+    // INGRESAR NOMBRE 
+
+    #ingreseNombre {
+        height: 200px;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        input {
+            height: 30px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        button {
+            font-size: 16px;
+        }
+    }
+
+    //ELECCION AVATAR//
 
     #menujugar {
-        height: 800px;
+        height: 650px;
 
         .jugar__titulos {
-            font-size: 40px;
+            font-size: 30px;
         }
 
         .container {
@@ -673,15 +645,14 @@ footer {
             grid-template-areas: "a1 a2"
                 "a3 a4"
                 "a5 a6";
-            grid-template-rows: 230px 230px 230px;
+            grid-template-rows: 180px 180px 180px;
 
             .card {
                 height: 150px;
-                margin: 50px;
             }
 
             img {
-                height: 150px;
+                height: 130px;
                 width: auto;
             }
 
@@ -710,7 +681,205 @@ footer {
             }
         }
     }
+
+
+    //JUGAR//
+
+    .container01 {
+        height: 780px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.6fr 0.9fr 1.4fr 1.1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "life life life"
+            "pedido points_section points_section"
+            "dona_deco dona_deco dona_deco"
+            "ingredientes ingredientes ingredientes";
+    }
+
+    .life {
+        grid-area: life;
+    }
+
+    .pedido {
+        grid-area: pedido;
+    }
+
+    .dona_deco {
+        grid-area: dona_deco;
+    }
+
+    .ingredientes {
+        grid-area: ingredientes;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .container_ingredientes {
+        grid-template-areas:
+            "ingrediente_violeta ingrediente_rosa ingrediente_celeste"
+            " ingrediente_verde ingrediente_amarillo ingrediente_granas"
+        ;
+    }
+
+    .points_section {
+        grid-area: points_section;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "segundos positivos"
+            "container_points negativos";
+    }
+
+    .segundos {
+        grid-area: segundos;
+    }
+
+    .container_points {
+        grid-area: container_points;
+    }
+
+    .positivos {
+        grid-area: positivos;
+    }
+
+    .negativos {
+        grid-area: negativos;
+    }
+
+
+
+    .pedido {
+        height: 150px;
+        width: auto;
+
+        h1 {
+            font-size: 16px;
+        }
+    }
+
+    .base {
+        width: 90px;
+        height: 90px;
+    }
+
+    .dona_prep_base1 {
+        height: 90px;
+        width: 90px;
+    }
+
+    .dona_decoracion_base1 {
+        height: 90px;
+        width: 140px;
+    }
+
+    .life {
+        height: 100px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .segundos,
+    .positivos,
+    .negativos,
+    .points {
+        font-size: 16px;
+
+    }
+
+    .dona_deco {
+        width: auto;
+    }
+
+    .time_img,
+    .ok_img,
+    .wrong_img,
+    .star_img {
+        padding-right: 1rem;
+        height: 36px;
+
+    }
+
+    .avatar {
+        height: 36px;
+        width: auto;
+
+    }
+
+    .plato_solo {
+        height: 180px;
+        width: 180px;
+    }
+
+    .dona_prep_sola {
+        height: 140px;
+
+    }
+
+    .dona_preparar {
+        height: 100%;
+        width: auto;
+        margin-bottom: 2%;
+    }
+
+    .dona_preparar_sola {
+        position: absolute;
+        top: 11%;
+        left: 11%;
+    }
+
+    .dona_decoracion_sola {
+        position: absolute;
+        top: 10%;
+        left: 11%;
+    }
+
+    .lifes_img {
+        height: 30px;
+        width: auto;
+    }
+
+    .points_section.avatar {
+        height: 80px;
+    }
+
+    .img__ingredientes {
+        height: 80px;
+        width: auto;
+    }
+
+    .img__ingredientes_granas {
+        height: 70px;
+        width: auto;
+    }
+
+    .img_bg_game,
+    .img_bg_game_1 {
+        display: none;
+    }
+
+
+
+    //RANKING
+
+    #ranking_container {
+        height: 800px;
+        width: 40%;
+    }
+
+    .gamer_avatar {
+        height: 100px;
+    }
+
+    .gamer_name,
+    .gamer_points {
+        font-size: 30px;
+    }
 }
+
 
 /*------------- TABLET----------------- */
 @media only screen and (min-width:768px) {
@@ -735,44 +904,69 @@ footer {
     }
 
     //JUGAR//
+    #mainjugar {
+        height: 1000px;
+    }
+
+    // INGRESAR NOMBRE 
+
+    #ingreseNombre {
+        height: 220px;
+
+        h1 {
+            font-size: 28px;
+        }
+
+        input {
+            height: 30px;
+            width: 280px;
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 17px;
+        }
+    }
+
+    //ELECCION AVATAR//
 
     #menujugar {
-        height: 1150px;
+        height: 800px;
+
 
         .jugar__titulos {
-            font-size: 50px;
+            font-size: 40px;
+
         }
 
         .container {
-
+            grid-template-rows: 200px 200px;
             grid-template-areas: "a1 a2"
                 "a3 a4"
                 "a5 a6";
-            grid-template-rows: 380px 380px 380px;
 
             .card {
-                height: 300px;
+                height: 180px;
                 margin: 50px;
             }
 
             img {
-                height: 300px;
+                height: 180px;
                 width: auto;
             }
 
             .intro {
                 height: 100px;
                 width: 350px;
-                padding: 6px;
-                top: 220px;
+                top: 180px;
 
                 h1 {
                     margin: 5px;
-                    font-size: 32px;
+                    font-size: 36px;
                 }
 
                 p {
-                    font-size: 18px;
+                    font-size: 20px;
                     margin: 5px;
                 }
             }
@@ -780,11 +974,58 @@ footer {
             .card:hover {
                 .intro {
                     height: 220px;
-                    top: 200px;
+                    top: 150px;
                 }
             }
         }
     }
+
+    //JUGAR
+    container01 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.4fr 1.6fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "pedido life life img_bg_game"
+            "pedido dona_deco dona_deco points_section"
+            "ingredientes dona_deco dona_deco points_section"
+            "ingredientes dona_deco dona_deco img_bg_game_1";
+    }
+
+    .pedido {
+        border-radius: 10px 0px 0px 0px;
+    }
+
+    .ingredientes {
+        border-radius: 0px 0px 0px 10px;
+    }
+
+    .container_ingredientes {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "ingrediente_violeta ingrediente_rosa"
+            "ingrediente_celeste ingrediente_verde"
+            "ingrediente_amarillo ingrediente_granas";
+        border-radius: 10px 10px 10px 10px;
+
+    }
+
+    .dona_preparar_sola {
+        position: absolute;
+        top: 9%;
+        left: 9%;
+
+    }
+
+    .dona_decoracion_sola {
+        position: absolute;
+        top: 8%;
+        left: 9%;
+
+    }
+
 
 }
 
@@ -819,6 +1060,23 @@ footer {
         height: 900px;
     }
 
+    // INGRESAR NOMBRE 
+
+    #ingreseNombre {
+        height: 300px;
+
+        input {
+            height: 40px;
+            width: 300px;
+            font-size: 26px;
+        }
+
+        button {
+            font-size: 17px;
+        }
+    }
+
+    //ELECCION AVATAR//
     #container01 {
         width: 100px;
     }
@@ -873,7 +1131,7 @@ footer {
         }
     }
 
-    //JUGAR1//
+    //JUGAR//
 
     .container01 {
         height: 800px;
@@ -913,6 +1171,12 @@ footer {
         height: 200px;
     }
 
+    .points_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .segundos,
     .positivos,
     .negativos,
@@ -940,6 +1204,10 @@ footer {
 
     }
 
+    .plato_solo {
+        width: 370px;
+    }
+
     .lifes_img {
         height: 50px;
         width: auto;
@@ -964,9 +1232,9 @@ footer {
         height: 110px;
         width: auto;
     }
-}
 
-//RANKING
+
+    //RANKING
 
     #ranking_container {
         height: 800px;
@@ -981,3 +1249,5 @@ footer {
     .gamer_points {
         font-size: 30px;
     }
+
+}

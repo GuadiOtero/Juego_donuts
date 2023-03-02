@@ -128,7 +128,6 @@ footer .footer-li:hover {
 }
 #mainjugar #ingreseNombre {
   position: absolute;
-  height: 300px;
   background-color: rgba(255, 255, 255, 0.6);
   border: 0.5px solid #fdfdfd;
   border-radius: 30px;
@@ -139,11 +138,6 @@ footer .footer-li:hover {
   padding: 1.5rem;
   font-family: "Fredoka", sans-serif;
 }
-#mainjugar #ingreseNombre input {
-  height: 40px;
-  width: 300px;
-  font-size: 26px;
-}
 #mainjugar #ingreseNombre button {
   background-color: #8ad7f0;
   border-radius: 5px;
@@ -151,7 +145,6 @@ footer .footer-li:hover {
   display: inline-block;
   cursor: pointer;
   color: #0f1517;
-  font-size: 17px;
   font-weight: bold;
   padding: 1% 3%;
   text-decoration: none;
@@ -226,11 +219,6 @@ footer .footer-li:hover {
   border: 0.5px solid #fdfdfd;
   border-radius: 30px;
   padding-top: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.4fr 1.6fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "pedido life life img_bg_game" "pedido dona_deco dona_deco points_section" "ingredientes dona_deco dona_deco points_section" "ingredientes dona_deco dona_deco img_bg_game_1";
   visibility: hidden;
 }
 #mainjugar .open-container01 {
@@ -238,7 +226,6 @@ footer .footer-li:hover {
 }
 #mainjugar .pedido {
   grid-area: pedido;
-  border-radius: 10px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -270,9 +257,6 @@ footer .footer-li:hover {
 }
 #mainjugar .points_section {
   grid-area: points_section;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   font-family: "Fredoka", sans-serif;
   color: #0f1517;
   border-top: 0.5px solid #8ad7f0;
@@ -328,7 +312,6 @@ footer .footer-li:hover {
 }
 #mainjugar .ingredientes {
   grid-area: ingredientes;
-  border-radius: 0px 0px 0px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,11 +320,8 @@ footer .footer-li:hover {
 }
 #mainjugar .container_ingredientes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "ingrediente_violeta ingrediente_rosa" "ingrediente_celeste ingrediente_verde" "ingrediente_amarillo ingrediente_granas";
   justify-content: center;
   align-items: center;
 }
@@ -377,8 +357,6 @@ footer .footer-li:hover {
 }
 #mainjugar .plato_solo {
   position: relative;
-  height: 70%;
-  width: auto;
 }
 #mainjugar .botones_plato {
   display: flex;
@@ -386,21 +364,6 @@ footer .footer-li:hover {
   justify-content: center;
   gap: 1rem;
   padding: 2%;
-}
-#mainjugar .dona_preparar {
-  height: 100%;
-  width: auto;
-  margin-bottom: 2%;
-}
-#mainjugar .dona_preparar_sola {
-  position: absolute;
-  top: 9%;
-  left: 9%;
-}
-#mainjugar .dona_decoracion_sola {
-  position: absolute;
-  top: 8%;
-  left: 9%;
 }
 #mainjugar .dona_finalizar {
   height: 30%;
@@ -536,22 +499,38 @@ footer .footer-li:hover {
   .logo {
     height: 100px;
   }
-  #menujugar {
+  #mainjugar {
     height: 800px;
   }
+  #ingreseNombre {
+    height: 200px;
+  }
+  #ingreseNombre h1 {
+    font-size: 20px;
+  }
+  #ingreseNombre input {
+    height: 30px;
+    width: 200px;
+    font-size: 16px;
+  }
+  #ingreseNombre button {
+    font-size: 16px;
+  }
+  #menujugar {
+    height: 650px;
+  }
   #menujugar .jugar__titulos {
-    font-size: 40px;
+    font-size: 30px;
   }
   #menujugar .container {
     grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
-    grid-template-rows: 230px 230px 230px;
+    grid-template-rows: 180px 180px 180px;
   }
   #menujugar .container .card {
     height: 150px;
-    margin: 50px;
   }
   #menujugar .container img {
-    height: 150px;
+    height: 130px;
     width: auto;
   }
   #menujugar .container .intro {
@@ -572,6 +551,147 @@ footer .footer-li:hover {
     height: 220px;
     top: 90px;
   }
+  .container01 {
+    height: 780px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 0.9fr 1.4fr 1.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "life life life" "pedido points_section points_section" "dona_deco dona_deco dona_deco" "ingredientes ingredientes ingredientes";
+  }
+  .life {
+    grid-area: life;
+  }
+  .pedido {
+    grid-area: pedido;
+  }
+  .dona_deco {
+    grid-area: dona_deco;
+  }
+  .ingredientes {
+    grid-area: ingredientes;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .container_ingredientes {
+    grid-template-areas: "ingrediente_violeta ingrediente_rosa ingrediente_celeste" " ingrediente_verde ingrediente_amarillo ingrediente_granas";
+  }
+  .points_section {
+    grid-area: points_section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "segundos positivos" "container_points negativos";
+  }
+  .segundos {
+    grid-area: segundos;
+  }
+  .container_points {
+    grid-area: container_points;
+  }
+  .positivos {
+    grid-area: positivos;
+  }
+  .negativos {
+    grid-area: negativos;
+  }
+  .pedido {
+    height: 150px;
+    width: auto;
+  }
+  .pedido h1 {
+    font-size: 16px;
+  }
+  .base {
+    width: 90px;
+    height: 90px;
+  }
+  .dona_prep_base1 {
+    height: 90px;
+    width: 90px;
+  }
+  .dona_decoracion_base1 {
+    height: 90px;
+    width: 140px;
+  }
+  .life {
+    height: 100px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .segundos,
+  .positivos,
+  .negativos,
+  .points {
+    font-size: 16px;
+  }
+  .dona_deco {
+    width: auto;
+  }
+  .time_img,
+  .ok_img,
+  .wrong_img,
+  .star_img {
+    padding-right: 1rem;
+    height: 36px;
+  }
+  .avatar {
+    height: 36px;
+    width: auto;
+  }
+  .plato_solo {
+    height: 180px;
+    width: 180px;
+  }
+  .dona_prep_sola {
+    height: 140px;
+  }
+  .dona_preparar {
+    height: 100%;
+    width: auto;
+    margin-bottom: 2%;
+  }
+  .dona_preparar_sola {
+    position: absolute;
+    top: 11%;
+    left: 11%;
+  }
+  .dona_decoracion_sola {
+    position: absolute;
+    top: 10%;
+    left: 11%;
+  }
+  .lifes_img {
+    height: 30px;
+    width: auto;
+  }
+  .points_section.avatar {
+    height: 80px;
+  }
+  .img__ingredientes {
+    height: 80px;
+    width: auto;
+  }
+  .img__ingredientes_granas {
+    height: 70px;
+    width: auto;
+  }
+  .img_bg_game,
+  .img_bg_game_1 {
+    display: none;
+  }
+  #ranking_container {
+    height: 800px;
+    width: 40%;
+  }
+  .gamer_avatar {
+    height: 100px;
+  }
+  .gamer_name,
+  .gamer_points {
+    font-size: 30px;
+  }
 }
 /*------------- TABLET----------------- */
 @media only screen and (min-width: 768px) {
@@ -590,41 +710,86 @@ footer .footer-li:hover {
   .logo {
     height: 150px;
   }
+  #mainjugar {
+    height: 1000px;
+  }
+  #ingreseNombre {
+    height: 220px;
+  }
+  #ingreseNombre h1 {
+    font-size: 28px;
+  }
+  #ingreseNombre input {
+    height: 30px;
+    width: 280px;
+    font-size: 20px;
+  }
+  #ingreseNombre button {
+    font-size: 17px;
+  }
   #menujugar {
-    height: 1150px;
+    height: 800px;
   }
   #menujugar .jugar__titulos {
-    font-size: 50px;
+    font-size: 40px;
   }
   #menujugar .container {
+    grid-template-rows: 200px 200px;
     grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
-    grid-template-rows: 380px 380px 380px;
   }
   #menujugar .container .card {
-    height: 300px;
+    height: 180px;
     margin: 50px;
   }
   #menujugar .container img {
-    height: 300px;
+    height: 180px;
     width: auto;
   }
   #menujugar .container .intro {
     height: 100px;
     width: 350px;
-    padding: 6px;
-    top: 220px;
+    top: 180px;
   }
   #menujugar .container .intro h1 {
     margin: 5px;
-    font-size: 32px;
+    font-size: 36px;
   }
   #menujugar .container .intro p {
-    font-size: 18px;
+    font-size: 20px;
     margin: 5px;
   }
   #menujugar .container .card:hover .intro {
     height: 220px;
-    top: 200px;
+    top: 150px;
+  }
+  container01 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.4fr 1.6fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "pedido life life img_bg_game" "pedido dona_deco dona_deco points_section" "ingredientes dona_deco dona_deco points_section" "ingredientes dona_deco dona_deco img_bg_game_1";
+  }
+  .pedido {
+    border-radius: 10px 0px 0px 0px;
+  }
+  .ingredientes {
+    border-radius: 0px 0px 0px 10px;
+  }
+  .container_ingredientes {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "ingrediente_violeta ingrediente_rosa" "ingrediente_celeste ingrediente_verde" "ingrediente_amarillo ingrediente_granas";
+    border-radius: 10px 10px 10px 10px;
+  }
+  .dona_preparar_sola {
+    position: absolute;
+    top: 9%;
+    left: 9%;
+  }
+  .dona_decoracion_sola {
+    position: absolute;
+    top: 8%;
+    left: 9%;
   }
 }
 /*------------- DESKTOP----------------- */
@@ -649,6 +814,17 @@ footer .footer-li:hover {
   }
   #mainjugar {
     height: 900px;
+  }
+  #ingreseNombre {
+    height: 300px;
+  }
+  #ingreseNombre input {
+    height: 40px;
+    width: 300px;
+    font-size: 26px;
+  }
+  #ingreseNombre button {
+    font-size: 17px;
   }
   #container01 {
     width: 100px;
@@ -716,6 +892,11 @@ footer .footer-li:hover {
   .life {
     height: 200px;
   }
+  .points_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .segundos,
   .positivos,
   .negativos,
@@ -735,6 +916,9 @@ footer .footer-li:hover {
   .avatar {
     height: 80px;
     width: auto;
+  }
+  .plato_solo {
+    width: 370px;
   }
   .lifes_img {
     height: 50px;
@@ -756,17 +940,15 @@ footer .footer-li:hover {
     height: 110px;
     width: auto;
   }
-}
-#ranking_container {
-  height: 800px;
-  width: 40%;
-}
-
-.gamer_avatar {
-  height: 100px;
-}
-
-.gamer_name,
-.gamer_points {
-  font-size: 30px;
+  #ranking_container {
+    height: 800px;
+    width: 40%;
+  }
+  .gamer_avatar {
+    height: 100px;
+  }
+  .gamer_name,
+  .gamer_points {
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
