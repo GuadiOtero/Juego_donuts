@@ -679,7 +679,7 @@ footer .footer-li:hover {
   }
   .img_bg_game,
   .img_bg_game_1 {
-    visibility: hidden;
+    display: none;
   }
   #ranking_container {
     height: 800px;
@@ -929,7 +929,7 @@ footer .footer-li:hover {
   .img_bg_game_1 {
     width: 300px;
     height: 200px;
-    visibility: visible;
+    display: block;
   }
   .points_section.avatar {
     height: 500px;
