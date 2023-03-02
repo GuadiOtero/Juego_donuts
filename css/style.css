@@ -679,7 +679,7 @@ footer .footer-li:hover {
   }
   .img_bg_game,
   .img_bg_game_1 {
-    display: none;
+    visibility: hidden;
   }
   #ranking_container {
     height: 800px;
@@ -762,7 +762,7 @@ footer .footer-li:hover {
     height: 220px;
     top: 150px;
   }
-  container01 {
+  .container01 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.4fr 1.6fr 1fr;
@@ -918,6 +918,7 @@ footer .footer-li:hover {
     width: auto;
   }
   .plato_solo {
+    height: 70%;
     width: 370px;
   }
   .lifes_img {
@@ -928,6 +929,7 @@ footer .footer-li:hover {
   .img_bg_game_1 {
     width: 300px;
     height: 200px;
+    visibility: visible;
   }
   .points_section.avatar {
     height: 500px;

@@ -858,8 +858,7 @@ footer {
 
     .img_bg_game,
     .img_bg_game_1 {
-        display: none;
-    }
+visibility: hidden;    }
 
 
 
@@ -981,7 +980,7 @@ footer {
     }
 
     //JUGAR
-    container01 {
+    .container01 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 0.4fr 1.6fr 1fr;
@@ -1205,6 +1204,7 @@ footer {
     }
 
     .plato_solo {
+        height: 70%;
         width: 370px;
     }
 
@@ -1217,6 +1217,8 @@ footer {
     .img_bg_game_1 {
         width: 300px;
         height: 200px;
+        visibility: visible;
+        
     }
 
     .points_section.avatar {
