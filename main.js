@@ -256,7 +256,7 @@ startGame = function () {
         bloquearfunciones();
         localStorage.setItem("points", puntaje);
         gamerRanking();
-    } else if (puntaje === 10000) {
+    } else if (puntaje === 2200) {
         alert("ganaste!!");
         seconds.innerHTML = secondsbase;
         clearInterval(counter);
