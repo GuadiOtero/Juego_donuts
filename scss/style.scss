@@ -40,6 +40,21 @@ body {
     font-family: 'Fredoka', sans-serif;
 }
 
+.btn-flotante {
+    border-radius: 5px;
+    background-color: $color_secundario;
+    position: fixed;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+
+.btn-flotante:hover {
+    background-color: #1c272b;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+}
+
 #menuprincipal {
     background-image: url(../img/background.png);
     display: flex;
@@ -55,7 +70,6 @@ body {
 
     h1 a:hover {
         color: $color_terciario;
-
     }
 }
 
@@ -63,7 +77,6 @@ footer {
     background-color: #B39884;
     bottom: 0;
     left: 0;
-    padding: 2rem 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +136,7 @@ footer {
     }
 
     .footer-li {
-        margin: 1rem 1.5rem;
+        margin: 1rem;
         cursor: pointer;
         opacity: 0.6;
         font-family: 'Fredoka', sans-serif;
@@ -141,7 +154,6 @@ footer {
     .footer-li:hover {
         opacity: 1;
     }
-
 }
 
 //JUGAR//
@@ -169,13 +181,12 @@ footer {
         font-family: 'Fredoka', sans-serif;
 
         button {
-            background-color: #8ad7f0;
+            background-color: $color_adc;
             border-radius: 5px;
-            border: 1px solid #8ad7f0;
+            border: 1px solid $color_adc;
             display: inline-block;
             cursor: pointer;
-            color: #0f1517;
-            font-weight: bold;
+            color: $color_secundario;
             padding: 1% 3%;
             text-decoration: none;
         }
@@ -198,7 +209,6 @@ footer {
         }
 
         .container {
-
             display: grid;
             align-content: space-around;
             justify-items: center;
@@ -224,7 +234,6 @@ footer {
 
                 h1 {
                     font-family: 'Fredoka', sans-serif;
-
                 }
 
                 p {
@@ -283,10 +292,10 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 0.5px solid #8ad7f0;
+        border: 0.5px solid $color_adc;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
-        color: #0f1517;
+        color: $color_secundario;
     }
 
     .base {
@@ -310,20 +319,20 @@ footer {
         display: flex;
         justify-content: space-around;
         width: auto;
-        border-top: 0.5px solid #8ad7f0;
-        border-bottom: 0.5px solid #8ad7f0;
-        border-left: 0.5px solid #8ad7f0;
-        border-right: 0.5px solid #8ad7f0;
+        border-top: 0.5px solid $color_adc;
+        border-bottom: 0.5px solid $color_adc;
+        border-left: 0.5px solid $color_adc;
+        border-right: 0.5px solid $color_adc;
     }
 
     .points_section {
         grid-area: points_section;
         font-family: 'Fredoka', sans-serif;
-        color: #0f1517;
-        border-top: 0.5px solid #8ad7f0;
-        border-bottom: 0.5px solid #8ad7f0;
-        border-left: 0.5px solid #8ad7f0;
-        border-right: 0.5px solid #8ad7f0;
+        color: $color_secundario;
+        border-top: 0.5px solid $color_adc;
+        border-bottom: 0.5px solid $color_adc;
+        border-left: 0.5px solid $color_adc;
+        border-right: 0.5px solid $color_adc;
     }
 
     #container_points,
@@ -334,8 +343,7 @@ footer {
         align-items: center;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
-        color: #0f1517;
-
+        color: $color_secundario;
     }
 
     #container_lifes {
@@ -345,7 +353,7 @@ footer {
         justify-content: space-evenly;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
-        color: #0f1517;
+        color: $color_secundario;
     }
 
     .dona_deco {
@@ -354,7 +362,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 0.5px solid #8ad7f0;
+        border: 0.5px solid $color_adc;
         padding: 1rem;
     }
 
@@ -362,20 +370,20 @@ footer {
         grid-area: img_bg_game;
         border-radius: 0px 10px 0px 0px;
         background-image: url(../img/bg.png);
-        border: 0.5px solid #8ad7f0;
+        border: 0.5px solid $color_adc;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
-        color: #0f1517;
+        color: $color_secundario;
     }
 
     .img_bg_game_1 {
         grid-area: img_bg_game_1;
         border-radius: 0px 0px 10px 0px;
         background-image: url(../img/bg.png);
-        border: 0.5px solid #8ad7f0;
+        border: 0.5px solid $color_adc;
         padding: 1rem;
         font-family: 'Fredoka', sans-serif;
-        color: #0f1517;
+        color: $color_secundario;
     }
 
     .ingredientes {
@@ -383,7 +391,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 0.5px solid #8ad7f0;
+        border: 0.5px solid $color_adc;
         padding: 1rem;
     }
 
@@ -442,27 +450,16 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
-        padding: 2%;
     }
-
-    .dona_finalizar {
-        height: 30%;
-        width: auto;
-        margin-bottom: 10%;
-    }
-
 
     #botonagregar {
-        background-color: #8ad7f0;
+        background-color: $color_adc;
         border-radius: 5px;
-        border: 1px solid #8ad7f0;
+        border: 3px solid #4cb1d3;
         display: inline-block;
         cursor: pointer;
-        color: #0f1517;
+        color: $color_secundario;
         font-family: 'Fredoka', sans-serif;
-        font-size: 17px;
-        font-weight: bold;
         padding: 1% 3%;
         text-decoration: none;
     }
@@ -470,13 +467,23 @@ footer {
     #botonstart {
         background-color: #77d14d;
         border-radius: 5px;
-        border: 1px solid #589b39;
+        border: 3px solid #589b39;
         display: inline-block;
         cursor: pointer;
-        color: #0f1517;
+        color: $color_secundario;
         font-family: 'Fredoka', sans-serif;
-        font-size: 17px;
-        font-weight: bold;
+        padding: 1% 3%;
+        text-decoration: none;
+    }
+
+    #botonborrar {
+        background-color: #DE4F4F;
+        border-radius: 5px;
+        border: 3px solid #9b3838;
+        display: inline-block;
+        cursor: pointer;
+        color: $color_secundario;
+        font-family: 'Fredoka', sans-serif;
         padding: 1% 3%;
         text-decoration: none;
     }
@@ -496,20 +503,6 @@ footer {
         border: 2px solid #323332;
     }
 
-    #botonborrar {
-        background-color: #DE4F4F;
-        border-radius: 5px;
-        border: 1px solid #9b3838;
-        display: inline-block;
-        cursor: pointer;
-        color: #0f1517;
-        font-family: 'Fredoka', sans-serif;
-        font-size: 17px;
-        font-weight: bold;
-        padding: 1% 3%;
-        text-decoration: none;
-    }
-
     #botonstart:hover {
         background-color: #589b39;
     }
@@ -525,6 +518,26 @@ footer {
     #boton:active {
         position: relative;
         top: 1px;
+    }
+}
+
+.swal2-container.swal2-center>.swal2-popup {
+    background-color: #ffffff;
+    border: 0.5px solid #fdfdfd;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    font-family: 'Fredoka', sans-serif;
+
+    .swal2-styled.swal2-confirm {
+        background-color: $color_adc;
+        border: 1px solid $color_adc;
+        color: $color_secundario;
+        font-family: 'Fredoka', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -560,7 +573,6 @@ footer {
             display: flex;
             width: 10%;
             justify-content: flex-start;
-
         }
     }
 
@@ -579,6 +591,20 @@ footer {
     visibility: visible;
 }
 
+
+/*ACERCA DE*/
+
+.container_acd {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff99;
+    border: 0.5px solid #fdfdfd;
+    border-radius: 30px;
+    font-family: 'Fredoka', sans-serif;
+    padding: 1rem;
+    margin: 3rem;
+}
+
 /*------------- MOBILE----------------- */
 @media only screen and (min-width:320px) {
 
@@ -591,6 +617,16 @@ footer {
         height: 800px;
     }
 
+    .btn-flotante {
+        padding: 12px 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #audioOn {
+        height: 30px;
+        width: 30px;
+    }
 
     h1 a {
         @include titulos(60px, Fredoka, bold);
@@ -607,7 +643,7 @@ footer {
 
     //JUGAR//
     #mainjugar {
-        height: 800px;
+        height: 820px;
     }
 
 
@@ -754,7 +790,7 @@ footer {
 
 
     .pedido {
-        height: 150px;
+        height: 180px;
         width: auto;
 
         h1 {
@@ -800,13 +836,11 @@ footer {
     .star_img {
         padding-right: 1rem;
         height: 36px;
-
     }
 
     .avatar {
         height: 36px;
         width: auto;
-
     }
 
     .plato_solo {
@@ -816,7 +850,6 @@ footer {
 
     .dona_prep_sola {
         height: 140px;
-
     }
 
     .dona_preparar {
@@ -835,6 +868,17 @@ footer {
         position: absolute;
         top: 10%;
         left: 11%;
+    }
+
+    .botones_plato {
+        gap: 2rem;
+        padding: 5%;
+    }
+
+    #botonagregar,
+    #botonstart,
+    #botonborrar {
+        font-size: 16px;
     }
 
     .lifes_img {
@@ -861,25 +905,22 @@ footer {
         display: none;
     }
 
-
-
     //RANKING
 
     #ranking_container {
         height: 800px;
-        width: 40%;
+        width: 80%;
     }
 
     .gamer_avatar {
-        height: 100px;
+        height: 50px;
     }
 
     .gamer_name,
     .gamer_points {
-        font-size: 30px;
+        font-size: 16px;
     }
 }
-
 
 /*------------- TABLET----------------- */
 @media only screen and (min-width:768px) {
@@ -888,7 +929,6 @@ footer {
     .navbar-brand {
         font-size: 50px;
     }
-
 
     h1 a {
         @include titulos(80px, Fredoka, bold);
@@ -933,10 +973,8 @@ footer {
     #menujugar {
         height: 800px;
 
-
         .jugar__titulos {
             font-size: 40px;
-
         }
 
         .container {
@@ -993,8 +1031,35 @@ footer {
             "ingredientes dona_deco dona_deco img_bg_game_1";
     }
 
+
+    .life {
+        height: 200px;
+    }
+
+
     .pedido {
         border-radius: 10px 0px 0px 0px;
+        height: 250px;
+        width: auto;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+
+    .base {
+        width: 180px;
+        height: 180px;
+    }
+
+    .dona_prep_base1 {
+        height: 180px;
+        width: 180px;
+    }
+
+    .dona_decoracion_base1 {
+        height: 180px;
+        width: 180px;
     }
 
     .ingredientes {
@@ -1009,24 +1074,91 @@ footer {
             "ingrediente_celeste ingrediente_verde"
             "ingrediente_amarillo ingrediente_granas";
         border-radius: 10px 10px 10px 10px;
+    }
 
+    .dona_prep_sola {
+        height: 210px;
+    }
+
+    .plato_solo {
+        display: flex;
+        justify-content: center;
     }
 
     .dona_preparar_sola {
         position: absolute;
-        top: 9%;
-        left: 9%;
-
+        top: 12%;
+        left: 15%;
     }
 
     .dona_decoracion_sola {
         position: absolute;
-        top: 8%;
-        left: 9%;
+        top: 11%;
+        left: 15%;
+    }
 
+    .botones_plato {
+        gap: 2rem;
+        padding: 5%;
+    }
+
+    #botonagregar,
+    #botonstart,
+    #botonborrar {
+        font-size: 16px;
+    }
+
+    .segundos,
+    .positivos,
+    .negativos,
+    .points {
+        font-size: 26px;
+    }
+
+    .dona_deco {
+        width: auto;
+    }
+
+    .time_img,
+    .ok_img,
+    .wrong_img,
+    .star_img {
+        padding-right: 1rem;
+        height: 52px;
+    }
+
+    .avatar {
+        height: 80px;
+        width: auto;
+    }
+
+    .plato_solo {
+        height: 55%;
+        width: 300px;
+    }
+
+    .lifes_img {
+        height: 50px;
+        width: auto;
+    }
+
+    .img_bg_game,
+    .img_bg_game_1 {
+        width: 300px;
+        height: 200px;
+        display: block;
     }
 
 
+    .img__ingredientes {
+        height: 100px;
+        width: auto;
+    }
+
+    .img__ingredientes_granas {
+        height: 80px;
+        width: auto;
+    }
 }
 
 /*------------- DESKTOP----------------- */
@@ -1063,7 +1195,7 @@ footer {
     // INGRESAR NOMBRE 
 
     #ingreseNombre {
-        height: 300px;
+        height: 200px;
 
         input {
             height: 40px;
@@ -1072,6 +1204,7 @@ footer {
         }
 
         button {
+            width: 84px;
             font-size: 17px;
         }
     }
@@ -1167,75 +1300,47 @@ footer {
 
     }
 
-    .life {
-        height: 200px;
-    }
-
     .points_section {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .segundos,
-    .positivos,
-    .negativos,
-    .points {
-        font-size: 26px;
-
-    }
 
     .dona_deco {
         width: auto;
     }
 
-    .time_img,
-    .ok_img,
-    .wrong_img,
-    .star_img {
-        padding-right: 1rem;
-        height: 52px;
-
-    }
-
-    .avatar {
-        height: 80px;
-        width: auto;
-
-    }
 
     .plato_solo {
         height: 70%;
         width: 370px;
     }
 
-    .lifes_img {
-        height: 50px;
-        width: auto;
-    }
-
-    .img_bg_game,
-    .img_bg_game_1 {
-        width: 300px;
-        height: 200px;
-        display: block;
+    .dona_preparar_sola {
+        position: absolute;
+        top: 9%;
+        left: 9%;
 
     }
 
-    .points_section.avatar {
-        height: 500px;
+    .dona_decoracion_sola {
+        position: absolute;
+        top: 8%;
+        left: 9%;
+
     }
 
-    .img__ingredientes {
-        height: 130px;
-        width: auto;
+    .botones_plato {
+        gap: 4.5rem;
+        padding: 5%;
     }
 
-    .img__ingredientes_granas {
-        height: 110px;
-        width: auto;
+    #botonagregar,
+    #botonstart,
+    #botonborrar {
+        font-size: 20px;
     }
-
 
     //RANKING
 
