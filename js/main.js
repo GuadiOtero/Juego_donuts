@@ -289,7 +289,7 @@ startGame = function () {
         showSweetAlert('¡Perdiste!', 'La próxima será mejor', "../img/SadKitten.png", "Gatito con cara triste");
         reproducirSonido('gameover');
 
-    } else if (puntaje === 2000) {
+    } else if (puntaje === 2200) {
         gameInfo();
         showSweetAlert('¡Ganaste!', 'Buen trabajo', "../img/logo.png", "Gatito con cara feliz");
         reproducirSonido('win');
